@@ -79,13 +79,14 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
   },
   {
     path: '/documentation',
     component: Layout,
+    hidden:true,
     children: [
       {
         path: 'index',
@@ -98,6 +99,7 @@ export const constantRoutes = [
   {
     path: '/guide',
     component: Layout,
+    hidden:true,
     redirect: '/guide/index',
     children: [
       {
@@ -240,6 +242,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: 'noRedirect',
     name: 'ErrorPages',
+    hidden:true,
     meta: {
       title: 'Error Pages',
       icon: '404'
@@ -263,6 +266,7 @@ export const asyncRoutes = [
   {
     path: '/error-log',
     component: Layout,
+    hidden:true,
     children: [
       {
         path: 'log',
@@ -327,19 +331,19 @@ export const asyncRoutes = [
     ]
   },
 
-  {
-    path: '/pdf',
-    component: Layout,
-    redirect: '/pdf/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/pdf/index'),
-        name: 'PDF',
-        meta: { title: 'PDF', icon: 'pdf' }
-      }
-    ]
-  },
+  // {
+  //   path: '/pdf',
+  //   component: Layout,
+  //   redirect: '/pdf/index',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/pdf/index'),
+  //       name: 'PDF',
+  //       meta: { title: 'PDF', icon: 'pdf' }
+  //     }
+  //   ]
+  // },
   {
     path: '/pdf/download',
     component: () => import('@/views/pdf/download'),

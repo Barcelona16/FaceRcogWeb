@@ -38,11 +38,11 @@ module.exports = [
         data: {
           total: 20,
           'items|20': [{
-            order_no: '@guid()',
+            order_no: '@name()',
             timestamp: +Mock.Random.date('T'),
             username: '@name()',
             price: '@float(1000, 15000, 0, 2)',
-            'status|1': ['success', 'pending']
+            'status|1': ['已找回', '找寻中']
           }]
         }
       }

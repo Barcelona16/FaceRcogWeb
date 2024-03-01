@@ -1,9 +1,11 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
-
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h1 class="titlebig">犬个体信息管理系统</h1>
+      </div>
+      <div class="title-container">
+        <h3 class="title">登录账号</h3>
       </div>
 
       <el-form-item prop="username">
@@ -45,21 +47,21 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
-
+      <el-button :loading="loading" type="primary" style="float:left;width:40%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
+      <el-button :loading="loading" type="primary" style="float:right;width:40%;margin-bottom:30px;" @click.native.prevent="handleLogin">注册</el-button>
       <div style="position:relative">
-        <div class="tips">
+        <!-- <div class="tips">
           <span>Username : admin</span>
           <span>Password : any</span>
-        </div>
-        <div class="tips">
+        </div> -->
+        <!-- <div class="tips">
           <span style="margin-right:18px;">Username : editor</span>
           <span>Password : any</span>
-        </div>
+        </div> -->
 
-        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
+        <!-- <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
           Or connect with
-        </el-button>
+        </el-button> -->
       </div>
     </el-form>
 
@@ -251,11 +253,16 @@ $cursor: #fff;
 $bg:#2d3a4b;
 $dark_gray:#889aa4;
 $light_gray:#eee;
+$bigtitle:#2d3a4b;
 
 .login-container {
   min-height: 100%;
   width: 100%;
   background-color: $bg;
+  background-image: url('~@/assets/bgimg/login.png'); // 根据你的项目结构和别名调整路径  
+  background-repeat: no-repeat; // 不重复图片  
+  background-position: center; // 图片居中  
+  background-size: cover; // 图片覆盖整个容器 
   overflow: hidden;
 
   .login-form {
@@ -263,7 +270,7 @@ $light_gray:#eee;
     width: 520px;
     max-width: 100%;
     padding: 160px 35px 0;
-    margin: 0 auto;
+    margin: 150px; // 为了配合壁纸
     overflow: hidden;
   }
 
@@ -297,8 +304,15 @@ $light_gray:#eee;
       text-align: center;
       font-weight: bold;
     }
+    .titlebig {
+      font-size: 36px;
+      color: $bigtitle;
+      margin: 0px auto 40px auto;
+      text-align: center;
+      font-weight: bold;
+    }
   }
-
+big
   .show-pwd {
     position: absolute;
     right: 10px;

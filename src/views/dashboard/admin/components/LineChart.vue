@@ -90,7 +90,7 @@ export default {
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: [ '在寻宠物狗周数量变化图']
         },
         series: [{
           name: 'expected', itemStyle: {
@@ -109,7 +109,7 @@ export default {
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: '在寻宠物狗周数量变化图',
           smooth: true,
           type: 'line',
           itemStyle: {
