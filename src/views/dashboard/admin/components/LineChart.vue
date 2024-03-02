@@ -90,7 +90,7 @@ export default {
           }
         },
         legend: {
-          data: [ '在寻宠物狗周数量变化图']
+          data: ['在寻宠物狗周数量变化图']
         },
         series: [{
           name: 'expected', itemStyle: {

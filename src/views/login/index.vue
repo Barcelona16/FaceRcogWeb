@@ -259,10 +259,10 @@ $bigtitle:#2d3a4b;
   min-height: 100%;
   width: 100%;
   background-color: $bg;
-  background-image: url('~@/assets/bgimg/login.png'); // 根据你的项目结构和别名调整路径  
-  background-repeat: no-repeat; // 不重复图片  
-  background-position: center; // 图片居中  
-  background-size: cover; // 图片覆盖整个容器 
+  background-image: url('~@/assets/bgimg/login.png'); // 根据你的项目结构和别名调整路径
+  background-repeat: no-repeat; // 不重复图片
+  background-position: center; // 图片居中
+  background-size: cover; // 图片覆盖整个容器
   overflow: hidden;
 
   .login-form {

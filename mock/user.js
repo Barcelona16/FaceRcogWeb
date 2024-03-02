@@ -18,7 +18,8 @@ const users = {
   'editor-token': {
     roles: ['editor'],
     introduction: 'I am an editor',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    avatar: 'https://wpimg.wallstcn.com/57ed425a-c71e-4201-9428-68760c0537c4.jpg',
+    //avatar: '/assets/avatar/dog1.jpg',
     name: 'Normal Editor'
   }
 }

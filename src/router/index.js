@@ -86,7 +86,7 @@ export const constantRoutes = [
   {
     path: '/documentation',
     component: Layout,
-    hidden:true,
+    hidden: true,
     children: [
       {
         path: 'index',
@@ -99,7 +99,7 @@ export const constantRoutes = [
   {
     path: '/guide',
     component: Layout,
-    hidden:true,
+    hidden: true,
     redirect: '/guide/index',
     children: [
       {
@@ -242,7 +242,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: 'noRedirect',
     name: 'ErrorPages',
-    hidden:true,
+    hidden: true,
     meta: {
       title: 'Error Pages',
       icon: '404'
@@ -266,7 +266,7 @@ export const asyncRoutes = [
   {
     path: '/error-log',
     component: Layout,
-    hidden:true,
+    hidden: true,
     children: [
       {
         path: 'log',
