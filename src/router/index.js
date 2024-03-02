@@ -196,9 +196,9 @@ export const asyncRoutes = [
     path: '/example',
     component: Layout,
     redirect: '/example/list',
-    name: 'Example',
+    name: '信息登记',
     meta: {
-      title: 'Example',
+      title: '信息登记',
       icon: 'el-icon-s-help'
     },
     children: [
@@ -206,7 +206,7 @@ export const asyncRoutes = [
         path: 'create',
         component: () => import('@/views/example/create'),
         name: 'CreateArticle',
-        meta: { title: 'Create Article', icon: 'edit' }
+        meta: { title: '宠物走失登记', icon: 'edit' }
       },
       {
         path: 'edit/:id(\\d+)',
@@ -219,7 +219,7 @@ export const asyncRoutes = [
         path: 'list',
         component: () => import('@/views/example/list'),
         name: 'ArticleList',
-        meta: { title: 'Article List', icon: 'list' }
+        meta: { title: '识别结果', icon: 'list' }
       }
     ]
   },

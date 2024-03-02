@@ -1,7 +1,14 @@
 const Mock = require('mockjs')
 
+function getRandomDate(startYear, endYear) {  
+  const start = new Date(startYear, 0, 1);  // 年份，月份从0开始，日期  
+  const end = new Date(endYear, 11, 31);    // 年份，月份从0开始，所以是11月，日期是31日  
+  const range = end - start;               // 两个日期之间的毫秒数  
+  const randomTimeStamp = start + Math.floor(Math.random() * range); // 生成随机毫秒数  
+  return new Date(randomTimeStamp);        // 将毫秒数转换为日期对象  
+}  
 const List = []
-const count = 100
+const count = 10
 
 const baseContent = '<p>I am testing data, I am testing data.</p><p><img src="https://wpimg.wallstcn.com/4c69009c-0fd4-4153-b112-6cb53d1cf943"></p>'
 const image_uri = 'https://wpimg.wallstcn.com/e4558086-631c-425c-9430-56ffb46e70b3'
@@ -9,8 +16,8 @@ const image_uri = 'https://wpimg.wallstcn.com/e4558086-631c-425c-9430-56ffb46e70
 for (let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment',
-    timestamp: +Mock.Random.date('T'),
-    author: '@first',
+    timestamp:() => getRandomDate(2020, 2023).toISOString(),
+    author: 'XXX',
     reviewer: '@first',
     title: '@title(5, 10)',
     content_short: 'mock data',
@@ -18,7 +25,7 @@ for (let i = 0; i < count; i++) {
     forecast: '@float(0, 100, 2, 2)',
     importance: '@integer(1, 3)',
     'type|1': ['CN', 'US', 'JP', 'EU'],
-    'status|1': ['published', 'draft'],
+    'status|1': ['活跃', '已寻回'],
     display_time: '@datetime',
     comment_disabled: true,
     pageviews: '@integer(300, 5000)',

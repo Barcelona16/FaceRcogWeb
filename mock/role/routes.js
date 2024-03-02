@@ -317,9 +317,9 @@ const asyncRoutes = [
     path: '/example',
     component: 'layout/Layout',
     redirect: '/example/list',
-    name: 'Example',
+    name: '信息登记',
     meta: {
-      title: 'Example',
+      title: '信息登记',
       icon: 'example'
     },
     children: [
